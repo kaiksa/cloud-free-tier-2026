@@ -2,6 +2,8 @@
 
 Comparing the free tier offers of major cloud providers. Updated for February 2026.
 
+**🌐 Live Demo:** https://cloud-free-tier-2026.vercel.app
+
 **Star ⭐ this repository if you found it useful!**
 
 ## Table of Contents
