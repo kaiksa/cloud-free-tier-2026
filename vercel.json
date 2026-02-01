@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "cloud-free-tier-2026",
+  "buildCommand": null,
+  "outputDirectory": null,
+  "public": true,
+  "github": {
+    "silent": true
+  }
+}

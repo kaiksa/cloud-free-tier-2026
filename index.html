@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Free Tier Comparison 2026</title>
+    <meta name="description" content="Compare free tier offerings from AWS, Azure, GCP, Oracle, Vercel, and more">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .update {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+        }
+
+        .top-picks {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .picks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .pick-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .pick-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .pick-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .pick-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .pick-provider {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .pick-features {
+            list-style: none;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .pick-features li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .pick-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        thead {
+            background: #667eea;
+            color: white;
+        }
+
+        th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 0.9em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .provider-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .check {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #dc3545;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .github-link:hover {
+            background: #555;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .picks-grid {
+                grid-template-columns: 1fr;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>☁️ Cloud Free Tier Comparison</h1>
+            <p class="subtitle">2026 Edition - AWS, Azure, GCP, Oracle & More</p>
+            <p class="update">Last updated: February 2026</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <p><strong>Comparing the free tier offers of major cloud providers.</strong> This comprehensive guide covers compute, storage, databases, and networking options to help you choose the right platform for your next project.</p>
+                <p style="margin-top: 15px;"><em>⭐ Star on GitHub if you find this useful!</em></p>
+            </div>
+
+            <section class="top-picks">
+                <h2 class="section-title">🏆 Top Picks</h2>
+
+                <div class="picks-grid">
+                    <div class="pick-card">
+                        <div class="pick-icon">🥇</div>
+                        <div class="pick-title">Best Overall Value</div>
+                        <div class="pick-provider">Oracle Cloud</div>
+                        <ul class="pick-features">
+                            <li>4 Arm-based VMs (24 GB RAM)</li>
+                            <li>200 GB block storage</li>
+                            <li>10 TB network egress/month</li>
+                            <li>2 Autonomous DBs (20 GB each)</li>
+                            <li>No credit card required!</li>
+                        </ul>
+                    </div>
+
+                    <div class="pick-card">
+                        <div class="pick-icon">⚡</div>
+                        <div class="pick-title">Best for Serverless</div>
+                        <div class="pick-provider">Vercel</div>
+                        <ul class="pick-features">
+                            <li>100K serverless calls/month</li>
+                            <li>Integrated Postgres & KV</li>
+                            <li>Next.js optimized</li>
+                            <li>Global edge network</li>
+                            <li>Unlimited deployments</li>
+                        </ul>
+                    </div>
+
+                    <div class="pick-card">
+                        <div class="pick-icon">🚀</div>
+                        <div class="pick-title">Best for Static Sites</div>
+                        <div class="pick-provider">Cloudflare</div>
+                        <ul class="pick-features">
+                            <li>Unlimited CDN bandwidth</li>
+                            <li>Workers (100K requests/day)</li>
+                            <li>R2 storage (10 GB, S3-compatible)</li>
+                            <li>D1 SQL database (5 GB)</li>
+                            <li>Pages for static hosting</li>
+                        </ul>
+                    </div>
+
+                    <div class="pick-card">
+                        <div class="pick-icon">📚</div>
+                        <div class="pick-title">Best for Learning</div>
+                        <div class="pick-provider">Google Cloud</div>
+                        <ul class="pick-features">
+                            <li>Free e2-micro instance</li>
+                            <li>Extensive free tier coverage</li>
+                            <li>Excellent documentation</li>
+                            <li>Interactive tutorials</li>
+                            <li>$300 trial credit</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">📊 Quick Comparison</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Provider</th>
+                                <th>Always Free Compute</th>
+                                <th>Storage</th>
+                                <th>Network</th>
+                                <th>Database</th>
+                                <th>Trial</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="provider-name">Oracle Cloud</td>
+                                <td>4 Arm VMs (24 GB)</td>
+                                <td>200 GB Block</td>
+                                <td>10 TB/month</td>
+                                <td>2x DB (20 GB)</td>
+                                <td>$300/30d</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Google Cloud</td>
+                                <td>e2-micro (1 GB)</td>
+                                <td>5 GB Cloud</td>
+                                <td>1 GB premium</td>
+                                <td>SQL + Firestore</td>
+                                <td>$300/90d</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">AWS</td>
+                                <td>750h t2.micro</td>
+                                <td>5 GB S3</td>
+                                <td>1 TB CloudFront</td>
+                                <td>DynamoDB 25 GB</td>
+                                <td>12 mo limited</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Azure</td>
+                                <td>12 mo B1S</td>
+                                <td>100 GB Blob</td>
+                                <td>100 GB/month</td>
+                                <td>Cosmos DB 5 GB</td>
+                                <td>$200 + 12mo</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Vercel</td>
+                                <td>100K functions</td>
+                                <td>256 MB Postgres</td>
+                                <td>100 GB/month</td>
+                                <td>Postgres 256 MB</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Cloudflare</td>
+                                <td>100K Workers</td>
+                                <td>10 GB R2</td>
+                                <td><span class="check">Unlimited</span></td>
+                                <td>D1 SQL 5 GB</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Netlify</td>
+                                <td>125K functions</td>
+                                <td>None (static)</td>
+                                <td><span class="check">Unlimited</span></td>
+                                <td>PostgreSQL</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">DigitalOcean</td>
+                                <td><span class="cross">None</span></td>
+                                <td><span class="cross">None</span></td>
+                                <td>-</td>
+                                <td><span class="cross">None</span></td>
+                                <td>$100/60d</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Hetzner</td>
+                                <td><span class="cross">None</span></td>
+                                <td><span class="cross">None</span></td>
+                                <td>-</td>
+                                <td><span class="cross">None</span></td>
+                                <td>Occasional</td>
+                            </tr>
+                            <tr>
+                                <td class="provider-name">Linode</td>
+                                <td><span class="cross">None</span></td>
+                                <td><span class="cross">None</span></td>
+                                <td>-</td>
+                                <td><span class="cross">None</span></td>
+                                <td>$100/60d</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">💡 Key Insights</h2>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #28a745;">
+                    <h3 style="margin-bottom: 15px; color: #28a745;">✨ Best Values</h3>
+                    <ul style="list-style: none;">
+                        <li style="padding: 8px 0;">🥇 <strong>Oracle Cloud</strong> - Most generous always-free tier with real compute power</li>
+                        <li style="padding: 8px 0;">🥈 <strong>Google Cloud</strong> - Great for learning with comprehensive documentation</li>
+                        <li style="padding: 8px 0;">🥉 <strong>Cloudflare</strong> - Best for static sites with unlimited CDN</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #ffc107; margin-top: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #ffc107;">⚠️ Watch Out For</h3>
+                    <ul style="list-style: none;">
+                        <li style="padding: 8px 0;">📍 <strong>Regional restrictions</strong> - Some free tiers only work in specific regions</li>
+                        <li style="padding: 8px 0;">💳 <strong>Hidden costs</strong> - Data egress, IP addresses, load balancers</li>
+                        <li style="padding: 8px 0;">⏰ <strong>Expiration</strong> - Most "free trials" expire after 12 months or less</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <a href="https://github.com/kaiksa/cloud-free-tier-2026" class="github-link" target="_blank">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                View on GitHub
+            </a>
+            <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+                Data compiled from official provider documentation • Last updated February 2026
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
