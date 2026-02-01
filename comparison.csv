@@ -1,0 +1,20 @@
+Provider,Always Free Compute,Trial Credits,Trial Duration,Storage Free,Network Egress,Databases Free,Serverless Free,Best For
+AWS,750h t2.micro (1 vCPU, 1GB RAM),None,12 months limited services,5GB S3 + 8GB EBS,1TB CloudFront,DynamoDB 25GB + RDS 12mo,1M Lambda requests,Enterprise/General Purpose
+Azure,$200 credit + 12mo B1S,$200,30 days + 12 months,100GB Blob,100GB/month,Cosmos DB 5GB + SQL 12mo,1M Functions,Enterprise/Hybrid
+Google Cloud,e2-micro (0.25 vCPU, 1GB RAM),$300,90 days,5GB Cloud Storage,1GB premium (200GB standard),Cloud SQL + Firestore 1GB,2M invocations,Learning/Documentation
+Oracle Cloud,4 Arm VMs (24GB RAM total),$300,30 days,200GB Block + 30GB Object,10TB/month,2x Autonomous DB 20GB each,None,Best Value Overall
+Vercel,100K serverless calls,None,None,256MB Postgres + 256MB KV,100GB/month,Postgres 256MB,100K invocations,Frontend/Serverless
+Netlify,125K functions/month,None,None,None (static sites),Unlimited,PostgreSQL available,125K invocations,Static Sites/JAMstack
+Cloudflare,100K Workers/day,None,None,10GB R2 + 5GB D1,Unlimited CDN,D1 SQL 5GB,100K requests,Edge Computing/CDN
+DigitalOcean,None,$100,60 days,None,None,None,None,Simplicity/Documentation
+Hetzner Cloud,None,Occasional credits,None,None,None,None,None,European Hosting/Cost-Effective
+Linode,None,$100,60 days,None,None,None,None,Alternative to AWS
+Alibaba Cloud,None,$450-$1300,Varies by product,Limited,Limited,None,Asian Markets
+Tencent Cloud,None,$300,30 days,None,None,None,None,Asian Markets
+IBM Cloud,Lite plans 256MB,$200,30 days,Limited,Limited,Limited,400K GB-seconds,Enterprise/Watson
+Render,750h (0.1 vCPU, 512MB),None,None,None (static),100GB,Redis + PostgreSQL free tiers,Spin down after inactivity,Simple PaaS
+OVHcloud,MongoDB 512MB,€200,30 days,None,None,MongoDB 512MB,None,European Hosting
+Salesforce,Developer Account,30 days,None,None,None,None,None,CRM/Enterprise
+JFrog,None,30 days,2GB storage,10GB transfer,None,None,2000 CI/CD minutes,Package Management
+OpenShift,Developer Sandbox,Free trial,None,None,None,None,None,Kubernetes Learning
+Zeabur,Serverless functions,None,None,None,10GB/month,None,None,Simple Deployments
